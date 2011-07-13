@@ -151,7 +151,7 @@ class cueParser{
 		if(count(@$cue['Track'])>0)
 		foreach($cue['Track'] as $key => $value){
 			$key++;
-			$out.= '  TRACK '.$key.' AUDIO'.PHP_EOL;
+			$out.= '  TRACK '.sprintf("%02d",$key).' AUDIO'.PHP_EOL;
 			$out.= '    PERFORMER "'.$value['performer'].'"'.PHP_EOL;
 			$out.= '    TITLE "'.$value['title'].'"'.PHP_EOL;
 			$out.= '    INDEX 01 '.$value['index'].PHP_EOL;
